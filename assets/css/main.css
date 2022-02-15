@@ -1,0 +1,110 @@
+/* GLOBALS */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+/*----------------------------*/
+/* HEADER */
+
+header {
+  position: fixed;
+  z-index: 1000;
+  width: 100%;
+  padding: 1% 0 1% 0;
+  transition: 0.5s;
+}
+
+header.abajo {
+  background: #fff;
+}
+
+header.abajo ul li {
+  color: black;
+}
+
+header.abajo .logo {
+  display: none;
+}
+
+header.abajo .dark-logo {
+  display: flex;
+  width: 80%;
+}
+
+
+/*----------------------------*/
+/* MENU */
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  margin: 0% 5% 0 5%;
+}
+
+.logo {
+  width: 80%;
+}
+
+.dark-logo {
+  display: none;
+}
+
+ul {
+  color: white;
+  display: inline-flex;
+}
+
+li {
+  display: flex;
+  padding: 0 0 0 30px;
+}
+
+
+/*----------------------------*/
+/* SECTIONS */
+
+.content {
+  margin: 0;
+  scroll-snap-align: y mandatory;
+  width: 100%;
+  height: 100%;
+}
+
+section {
+  height: 100vh;
+  color: white;
+  scroll-snap-align: start;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+section:nth-of-type(1) {
+  background-image: url("../img/coding-on-a-computer.png");
+}
+
+section:nth-of-type(2) {
+  background: rgb(82, 87, 88);
+}
+
+section:nth-of-type(3) {
+  background: rgb(158, 152, 152);
+}
+
+section h3 {
+  font-size: 3em;
+}
+
+section p {
+  font-size: 1.2em;
+  padding: 1.5% 20% 0 20%;
+  text-align: center;
+}
