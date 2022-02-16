@@ -13,6 +13,7 @@
 
 html {
   font-size: 62.5%;
+  font-family: "Ubuntu", sans-serif;
 }
 
 /*----------------------------*/
@@ -32,6 +33,12 @@ header.abajo {
 
 header.abajo ul li {
   color: black;
+  font-weight: 700;
+}
+
+header.abajo button {
+  color: black;
+  font-weight: 700;
 }
 
 /*----------------------------*/
@@ -42,7 +49,7 @@ header.abajo ul li {
   align-items: center;
 }
 
-nav {
+header nav {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -55,15 +62,37 @@ nav {
   width: 10%;
 }
 
-ul {
+header ul {
   color: white;
   display: inline-flex;
 }
 
-li {
+header li {
   display: flex;
   padding: 0 0 0 30px;
   text-align: center;
+  font-size: 1.6rem;
+}
+
+header a:hover {
+  cursor: pointer;
+  color: #4588cc;
+  transition: 0.5s;
+}
+
+header button {
+  background: none;
+  border: none;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.8rem;
+  color: white;
+  padding: 0.8rem;
+}
+
+header button:hover {
+  color: #4588cc;
+  transition: 0.5s;
+  cursor: pointer;
 }
 
 /*----------------------------*/
@@ -100,12 +129,17 @@ section:nth-of-type(1) img {
   width: 40%;
 }
 
+section:nth-of-type(1) p {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
 /*----------------------------*/
 /* SECTION SERVICIOS */
 
 section:nth-of-type(2) {
   height: 100%;
-  background: rgb(82, 87, 88);
+  background: rgb(231, 231, 231);
   font-size: 1.6rem;
   display: flex;
   flex-direction: column;
@@ -116,7 +150,7 @@ section:nth-of-type(2) {
 
 .servicios,
 .servicios-supp {
-  height: 20rem;
+  height: 100%;
   width: 60%;
   display: flex;
   flex-direction: column;
@@ -133,7 +167,8 @@ section:nth-of-type(2) {
 
 .image-data,
 .image-data-supp {
-  height: 25rem;
+  width: 100%;
+  height: 100%;
   position: relative;
   z-index: 1;
 }
@@ -141,7 +176,7 @@ section:nth-of-type(2) {
 .card-data,
 .card-data-supp {
   background-color: #fff;
-  padding: 2rem 3rem;
+  padding: 5rem 5rem;
   position: relative;
 }
 
@@ -154,7 +189,6 @@ section:nth-of-type(2) {
 .card__description,
 .card__description-supp {
   padding: 2% 0 0 0;
-  text-align: left;
   position: relative;
 }
 
@@ -170,11 +204,18 @@ section:nth-of-type(2) {
   border-radius: 2rem;
 }
 
+.front-color {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(69, 136, 204, 0.5 );
+  position: absolute;
+}
+
 @media screen and (min-width: 600px) {
   .servicios,
   .servicios-supp {
     flex-direction: row;
-    max-height: 75rem;
+    height: 100%;
   }
 
   .image-data,
@@ -282,5 +323,4 @@ section h3 {
 section p {
   font-size: 1.2em;
   padding: 1.5% 20% 0 20%;
-  text-align: center;
 }
