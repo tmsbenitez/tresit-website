@@ -95,6 +95,12 @@ header button:hover {
   cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+  header ul, li {
+    display: none;
+  }
+}
+
 /*----------------------------*/
 /* SECTIONS */
 
@@ -126,13 +132,39 @@ section:nth-of-type(1) {
 }
 
 section:nth-of-type(1) img {
-  width: 50rem;
+  width: 90%;
 }
 
 section:nth-of-type(1) p {
   font-size: 1.8rem;
   text-align: center;
-  padding: 1.5% 20% 0 20%;
+  padding: 1.5% 5% 0 5%
+}
+
+.content button {
+  width: 10%;
+  background-color: #4588cc;
+  color: #fff;
+  border-radius: 2rem;
+  font-family: 'Barlow', sans-serif;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: 2px solid #fff;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.content button:hover {
+  background-color: #fff;
+  color: #4588cc;
+  transition: 0.3s;
+}
+
+@media screen and (min-width: 1000px) {
+  section:nth-of-type(1) p {
+    padding: 1.5% 20% 0 20%;
+  }
 }
 
 /*----------------------------*/
@@ -153,6 +185,8 @@ section:nth-of-type(2) {
 .servicios-supp h1 {
   font-family: "Barlow", sans-serif;
   text-transform: uppercase;
+  font-size: 2.2rem;
+  text-align: center;
 }
 
 .servicios,
@@ -183,7 +217,7 @@ section:nth-of-type(2) {
 .card-data,
 .card-data-supp {
   background-color: #fff;
-  padding: 5rem 5rem;
+  padding: 2rem;
   position: relative;
 }
 
@@ -218,7 +252,7 @@ section:nth-of-type(2) {
   position: absolute;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 1000px) {
   .servicios,
   .servicios-supp {
     flex-direction: row;
@@ -234,6 +268,7 @@ section:nth-of-type(2) {
   .card-data,
   .card-data-supp {
     flex-basis: 60%;
+    padding: 5rem 5rem;
   }
 
   .card-data::before {
@@ -268,6 +303,11 @@ section:nth-of-type(2) {
   .serv-supp,
   .serv-main {
     display: none;
+  }
+
+  .servicios h1, .servicios-supp h1 {
+    text-align: justify;
+    font-size: 2.6rem;
   }
 }
 
@@ -364,7 +404,7 @@ section:nth-of-type(4) {
 }
 
 .contacto .info {
-  width: 40rem;
+  width: 50%;
   display: flex;
   flex-direction: column;
   padding: 1rem;
@@ -457,11 +497,26 @@ textarea::placeholder {
 @media screen and (max-width: 1000px) {
   .contacto .form {
     flex-direction: column;
-    width: 50vh;
+    width: 80vw;
+    padding: 5rem 0 5rem 0;
+    align-items: center;
   }
 
   .contacto .contact {
     justify-content: center;
     margin-bottom: 2rem;
+  }
+
+  .contacto .fullname {
+    flex-direction: column;
+  }
+
+  .contacto textarea {
+    height: 100%;
+  }
+
+  .contacto .info {
+    width: 75%;
+    padding: 0;
   }
 }
