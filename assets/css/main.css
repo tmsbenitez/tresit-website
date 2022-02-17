@@ -7,7 +7,7 @@
 }
 
 *::selection {
-  background-color: rgb(2, 9, 27);
+  background-color: #000;
   color: white;
 }
 
@@ -77,7 +77,7 @@ header li {
 header a:hover {
   cursor: pointer;
   color: #4588cc;
-  transition: 0.5s;
+  transition: 0.2s;
 }
 
 header button {
@@ -91,7 +91,7 @@ header button {
 
 header button:hover {
   color: #4588cc;
-  transition: 0.5s;
+  transition: 0.2s;
   cursor: pointer;
 }
 
@@ -132,6 +132,7 @@ section:nth-of-type(1) img {
 section:nth-of-type(1) p {
   font-size: 1.8rem;
   text-align: center;
+  padding: 1.5% 20% 0 20%;
 }
 
 /*----------------------------*/
@@ -146,6 +147,12 @@ section:nth-of-type(2) {
   align-items: center;
   justify-content: center;
   padding: 2.5% 1.5rem 5% 0;
+}
+
+.servicios h1,
+.servicios-supp h1 {
+  font-family: "Barlow", sans-serif;
+  text-transform: uppercase;
 }
 
 .servicios,
@@ -207,7 +214,7 @@ section:nth-of-type(2) {
 .front-color {
   width: 100%;
   height: 100%;
-  background-color: rgba(69, 136, 204, 0.5 );
+  background-color: rgba(69, 136, 204, 0.5);
   position: absolute;
 }
 
@@ -256,9 +263,19 @@ section:nth-of-type(2) {
   section:nth-of-type(1) img {
     width: 40%;
   }
+
+  .serv-dev,
+  .serv-supp,
+  .serv-main {
+    display: none;
+  }
 }
 
 /* DESARROLLO */
+
+.serv-dev {
+  width: 100%;
+}
 
 .background-image-dev {
   background: url("../img/servicios-desarrollo.png") center no-repeat;
@@ -274,7 +291,11 @@ section:nth-of-type(2) {
   z-index: -1;
 }
 
-/* ASESORIA */
+/* SOPORTE */
+
+.serv-supp {
+  width: 100%;
+}
 
 .background-image-supp {
   background: url("../img/servicios-soporte.png") center no-repeat;
@@ -290,7 +311,11 @@ section:nth-of-type(2) {
   z-index: -1;
 }
 
-/* SOPORTE */
+/* MANTENIMIENTO */
+
+.serv-main {
+  width: 100%;
+}
 
 .background-image-main {
   background: url("../img/servicios-mantenimiento.png") center no-repeat;
@@ -310,7 +335,8 @@ section:nth-of-type(2) {
 /* SECTION PRODUCTOS */
 
 section:nth-of-type(3) {
-  background: rgb(158, 152, 152);
+  background: #4588cc;
+  height: 70vh;
 }
 
 /*----------------------------*/
@@ -318,13 +344,124 @@ section:nth-of-type(3) {
 
 section:nth-of-type(4) {
   background: rgb(44, 44, 44);
+  padding: 7%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
-section h3 {
-  font-size: 3em;
+.contacto .form {
+  width: 80rem;
+  color: #fff;
+  padding: 5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: rgb(49, 49, 49);
+  border: 1px solid rgb(177, 177, 177);
+  box-shadow: black 0rem 0.5rem 1.5rem 0.05rem;
 }
 
-section p {
-  font-size: 1.2em;
-  padding: 1.5% 20% 0 20%;
+.contacto .info {
+  width: 40rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.contacto .contact {
+  display: flex;
+}
+
+.contacto input,
+button,
+textarea {
+  font-family: "Cantarell", sans-serif;
+
+  background-color: rgb(49, 49, 49);
+  color: rgb(177, 177, 177);
+
+  padding: 1rem;
+  margin: 0rem 0 3rem 0;
+}
+
+.contacto input,
+textarea {
+  font-size: 1.4rem;
+  border: none;
+  border-bottom: 1px solid rgb(177, 177, 177);
+}
+
+.contacto input:focus,
+textarea:focus {
+  outline: none;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+.contacto textarea {
+  height: 15rem;
+}
+
+.contacto button {
+  border: 1px solid rgb(177, 177, 177);
+  width: 10rem;
+  margin-left: auto;
+  margin-top: 2rem;
+  cursor: pointer;
+}
+
+.contacto button:hover {
+  color: #fff;
+  border: 1px solid #fff;
+  transition: 0.2s;
+}
+
+.contacto label {
+  font-family: "Barlow", sans-serif;
+  font-size: 1.6rem;
+}
+
+.contacto input::placeholder,
+textarea::placeholder {
+  color: rgb(177, 177, 177);
+}
+
+.contacto input:focus::placeholder, textarea:focus::placeholder {
+  color: #fff;
+}
+
+.contacto h1 {
+  height: fit-content;
+  font-size: 3rem;
+  font-family: "Barlow", sans-serif;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+
+.contacto .name {
+  margin-right: 1rem;
+}
+
+.contacto .name .lastname {
+  width: 100%;
+}
+
+.contacto .fullname {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1000px) {
+  .contacto .form {
+    flex-direction: column;
+    width: 50vh;
+  }
+
+  .contacto .contact {
+    justify-content: center;
+    margin-bottom: 2rem;
+  }
 }

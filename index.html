@@ -8,12 +8,9 @@
     <link rel="stylesheet" href="./assets/css/main.css" />
 
     <!-- FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@300&family=Cantarell&family=Ubuntu:wght@300&display=swap" rel="stylesheet">
   </head>
   <body>
     <header class="h-default">
@@ -59,9 +56,10 @@
         <h1>Nuestros Servicios</h1>
         <div class="servicios">
           <div class="image-data">
-              <div class="background-image-dev"></div>
-              <div class="front-color"></div>
+            <div class="background-image-dev"></div>
+            <div class="front-color"></div>
           </div>
+          <img src="./assets/img/servicios-desarrollo.png" class="serv-dev" />
           <div class="card-data">
             <h1 class="card__title dev">Desarrollo</h1>
             <p class="card__description dev">
@@ -73,6 +71,7 @@
           </div>
         </div>
         <div class="servicios-supp">
+          <img src="./assets/img/servicios-soporte.png" class="serv-supp" />
           <div class="card-data-supp">
             <h1 class="card__title-supp">Soporte</h1>
             <p class="card__description-supp">
@@ -92,6 +91,10 @@
             <div class="background-image-main"></div>
             <div class="front-color"></div>
           </div>
+          <img
+            src="./assets/img/servicios-mantenimiento.png"
+            class="serv-main"
+          />
           <div class="card-data">
             <h1 class="card__title">Mantenimiento</h1>
             <p class="card__description">
@@ -107,9 +110,21 @@
         <h3>ASD</h3>
         <p>lorem</p>
       </section>
-      <section>
-        <h3>ASD</h3>
-        <p>lorem</p>
+      <section class="contacto">
+        <form class="form">
+          <div class="contact">
+            <h1>Contáctanos:</h1>
+          </div>
+          <div class="info">
+            <div class="fullname">
+              <input class="name" placeholder="Nombre" />
+              <input class="lastname" placeholder="Apellido" />
+            </div>
+            <input class="email" placeholder="Email" type="email" />
+            <textarea class="message" placeholder="Mensaje"></textarea>
+            <button type="button">Enviar</button>
+          </div>
+        </form>
       </section>
     </div>
     <script src="./assets/js/index.js"></script>
