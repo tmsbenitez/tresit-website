@@ -141,7 +141,7 @@ section:nth-of-type(1) p {
   padding: 1.5% 5% 0 5%
 }
 
-.content button {
+.cta {
   width: 10%;
   background-color: #4588cc;
   color: #fff;
@@ -155,7 +155,7 @@ section:nth-of-type(1) p {
   cursor: pointer;
 }
 
-.content button:hover {
+.cta:hover {
   background-color: #fff;
   color: #4588cc;
   transition: 0.3s;
