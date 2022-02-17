@@ -1,7 +1,5 @@
 /* GLOBALS */
-*,
-*::before,
-*::after {
+* {
   margin: 0;
   padding: 0;
 }
@@ -14,17 +12,19 @@
 html {
   font-size: 62.5%;
   font-family: "Ubuntu", sans-serif;
+  scroll-behavior: smooth;
 }
 
 /*----------------------------*/
 /* HEADER */
 
 header {
+  display: block;
   position: fixed;
   z-index: 1000;
   width: 100%;
-  padding: 1% 0 1% 0;
   transition: 0.5s;
+  padding: 1% 0 1% 0;
 }
 
 header.abajo {
@@ -74,6 +74,16 @@ header li {
   font-size: 1.6rem;
 }
 
+header a {
+  text-decoration: none;
+  color: #fff;
+}
+
+header.abajo a {
+  text-decoration: none;
+  color: #000;
+}
+
 header a:hover {
   cursor: pointer;
   color: #4588cc;
@@ -95,9 +105,126 @@ header button:hover {
   cursor: pointer;
 }
 
-@media screen and (max-width: 600px) {
-  header ul, li {
+.selected {
+  color: #4588cc;
+  transition: 0.2s;
+}
+
+header.abajo .selected {
+  color: #4588cc;
+  transition: 0.2s;
+}
+
+.open-menu,
+.close-menu {
+  display: none;
+}
+
+#es-mobile,
+#en-mobile {
+  display: none;
+}
+
+#es,
+#en {
+  margin: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  header {
+    padding: 2.2% 0 2.2% 0;
+  }
+
+  header nav {
+    display: block;
+    margin: 0% 5% 0 5%;
+  }
+
+  header.abajo a {
+    color: #fff;
+    font-weight: 300;
+  }
+
+  header.abajo #es-mobile,
+  #en-mobile {
+    color: #fff;
+    font-weight: 300;
+  }
+
+  #es-mobile,
+  #en-mobile {
+    display: flex;
+    margin: 0;
+  }
+
+  #es-mobile {
+    margin-top: auto;
+  }
+
+  #en-mobile {
+    margin-bottom: auto;
+  }
+
+  .menu {
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+    background-color: #21282f;
+    color: #fff;
+    height: 100%;
+    overflow-y: auto;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+  }
+
+  .menu li {
+    padding: 0;
+  }
+
+  .menu a {
+    line-height: 6rem;
+  }
+
+  .open-menu,
+  .close-menu {
+    display: block;
+  }
+
+  header.abajo .close-menu {
+    color: #fff;
+  }
+
+  .close-menu {
+    align-self: flex-end;
+    padding-right: 2.75rem;
+    margin-bottom: 0;
+  }
+
+  .language-btn {
     display: none;
+  }
+
+  .leftmenu {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .leftmenu .logo2 {
+    width: 20%;
+  }
+
+  .open-menu {
+    margin-bottom: 0;
+  }
+
+  .menu_opened {
+    opacity: 1;
+    pointer-events: all;
   }
 }
 
@@ -106,13 +233,12 @@ header button:hover {
 
 .content {
   margin: 0;
-  scroll-snap-align: y mandatory;
   width: 100%;
   height: 100%;
 }
 
-section {
-  scroll-snap-align: start;
+section[id] {
+  scroll-margin-top: 67px;
 }
 
 /*----------------------------*/
@@ -138,27 +264,35 @@ section:nth-of-type(1) img {
 section:nth-of-type(1) p {
   font-size: 1.8rem;
   text-align: center;
-  padding: 1.5% 5% 0 5%
+  padding: 1.5% 5% 0 5%;
 }
 
 .cta {
-  width: 10%;
+  width: 12rem;
   background-color: #4588cc;
   color: #fff;
   border-radius: 2rem;
-  font-family: 'Barlow', sans-serif;
+  font-family: "Barlow", sans-serif;
   font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 700;
   border: 2px solid #fff;
   margin-top: 2rem;
   cursor: pointer;
+  padding: 1rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 .cta:hover {
   background-color: #fff;
   color: #4588cc;
   transition: 0.3s;
+}
+
+.cta a {
+  text-decoration: none;
+  color: #fff;
 }
 
 @media screen and (min-width: 1000px) {
@@ -178,7 +312,7 @@ section:nth-of-type(2) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2.5% 1.5rem 5% 0;
+  padding: 4% 0 4% 0;
 }
 
 .servicios h1,
@@ -305,7 +439,8 @@ section:nth-of-type(2) {
     display: none;
   }
 
-  .servicios h1, .servicios-supp h1 {
+  .servicios h1,
+  .servicios-supp h1 {
     text-align: justify;
     font-size: 2.6rem;
   }
@@ -468,7 +603,8 @@ textarea::placeholder {
   color: rgb(177, 177, 177);
 }
 
-.contacto input:focus::placeholder, textarea:focus::placeholder {
+.contacto input:focus::placeholder,
+textarea:focus::placeholder {
   color: #fff;
 }
 
@@ -478,6 +614,20 @@ textarea::placeholder {
   font-family: "Barlow", sans-serif;
   letter-spacing: 0.5rem;
   text-align: center;
+}
+
+.form-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-img img {
+  opacity: 0.05;
+  width: 15vw;
+  height: 30vh;
+  position: absolute;
+  margin: auto;
 }
 
 .contacto .name {
@@ -495,6 +645,11 @@ textarea::placeholder {
 }
 
 @media screen and (max-width: 1000px) {
+
+  .form-img img {
+    width: 50%;
+  }
+
   .contacto .form {
     flex-direction: column;
     width: 80vw;
