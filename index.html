@@ -5,9 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>tresIT</title>
+    <link
+      rel="stylesheet"
+      href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"
+    />
     <link rel="stylesheet" href="./assets/css/main.css" />
     <link rel="icon" href="favicon.ico" />
+
     <script defer src="./assets/js/index.js"></script>
+    <script defer src="./assets/js/formulario.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2c36e9b7b1.js"
+      crossorigin="anonymous"
+    ></script>
+
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -17,7 +28,6 @@
     />
   </head>
   <body>
-
     <!-- HEADER Y MENU -->
 
     <header class="h-default">
@@ -87,15 +97,14 @@
 
     <!-- SECCIONES -->
     <div class="content">
-
       <!-- SECCION: INICIO -->
 
       <section id="inicio">
         <img src="./assets/img/logo.png" />
         <p>
-          TresIT es un equipo de profesionales que trabaja día a día para
-          transformar sus ideas en soluciones a la medida de sus necesidades
-          empresariales o de gestión.
+          Somos profesionales que trabaja día a día para transformar sus ideas
+          en soluciones a la medida de sus necesidades empresariales o de
+          gestión.
         </p>
         <a class="cta" href="#contacto">Contacto</a>
       </section>
@@ -169,9 +178,13 @@
 
       <!-- SECCION CLIENTES -->
 
-      <section id="clientes">
-        <h2>clientes</h2>
-        <p>lorem</p>
+      <section class="clientes" id="clientes">
+        <img src="./assets/img/ejemplo.png" />
+        <img src="./assets/img/ejemplo2.png" />
+        <img src="./assets/img/ejemplo3.png" />
+        <img src="./assets/img/ejemplo4.png" />
+        <img src="./assets/img/ejemplo5.png" />
+        <img src="./assets/img/ejemplo6.png" />
       </section>
       <!------------------->
 
@@ -180,18 +193,67 @@
       <section id="contacto" class="contacto">
         <div class="form-img">
           <img src="./assets/img/ico-bw.png" />
-          <form class="form">
+          <form class="form" id="form">
             <div class="contact">
               <h1>Contáctanos:</h1>
             </div>
             <div class="info">
               <div class="fullname">
-                <input class="name" placeholder="Nombre" />
-                <input class="lastname" placeholder="Apellido" />
+                <div id="grupo__nombre">
+                  <input
+                    class="name"
+                    placeholder="Nombre"
+                    type="text"
+                    name="nombre"
+                    id="input__nombre"
+                  />
+                  <p class="form__input-error">Ingrese un nombre válido.</p>
+                </div>
+
+                <div id="grupo__apellido">
+                  <input
+                    class="lastname"
+                    placeholder="Apellido"
+                    type="text"
+                    name="apellido"
+                    id="input__apellido"
+                  />
+                  <p class="form__input-error">Ingrese un apellido válido.</p>
+                </div>
               </div>
-              <input class="email" placeholder="Email" type="email" />
-              <textarea class="message" placeholder="Mensaje"></textarea>
-              <button type="button">Enviar</button>
+
+              <div id="grupo__email">
+                <input
+                  class="email"
+                  placeholder="Email"
+                  type="email"
+                  name="email"
+                  id="input__email"
+                />
+                <p class="form__input-error">
+                  Ingrese un correo electrónico válido.
+                </p>
+              </div>
+
+              <div id="grupo__mensaje">
+                <textarea
+                  class="message"
+                  placeholder="Mensaje"
+                  name="mensaje"
+                  id="input__mensaje"
+                ></textarea>
+                <p class="form__input-error">Por favor rellene este campo.</p>
+              </div>
+
+              <div class="form__msg-success" id="form__msg-success">
+                <p>Enviado exitosamente! Nos comunicaremos pronto.</p>
+              </div>
+              <div class="form__msg" id="form__msg">
+                <p>
+                  <b>Error:</b> Por favor rellena el formulario correctamente.
+                </p>
+              </div>
+              <button type="submit" class="form__btn">Enviar</button>
             </div>
           </form>
         </div>
