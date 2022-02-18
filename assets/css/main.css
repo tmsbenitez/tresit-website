@@ -29,6 +29,20 @@ select:-webkit-autofill:focus {
   transition: background-color 5000s ease-in-out 0s;
 }
 
+::-webkit-resizer {
+  pointer-events: none;
+  box-shadow: red 0px 0px 0px 0px;
+    display: none;
+    width: 0px;
+    height: 0px;
+    border-width: 0px;
+    border-style: solid;
+    border-color: red;
+    border-image: initial;
+    background: none;
+    outline: none;
+}
+
 /*----------------------------*/
 /* HEADER */
 
