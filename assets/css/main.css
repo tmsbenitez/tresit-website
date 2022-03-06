@@ -32,15 +32,44 @@ select:-webkit-autofill:focus {
 ::-webkit-resizer {
   pointer-events: none;
   box-shadow: red 0px 0px 0px 0px;
-    display: none;
-    width: 0px;
-    height: 0px;
-    border-width: 0px;
-    border-style: solid;
-    border-color: red;
-    border-image: initial;
-    background: none;
-    outline: none;
+  display: none;
+  width: 0px;
+  height: 0px;
+  border-width: 0px;
+  border-style: solid;
+  border-color: red;
+  border-image: initial;
+  background: none;
+  outline: none;
+}
+
+h2 {
+  font-size: 2rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 1rem 8rem 1rem 2rem;
+  align-items: baseline;
+  float: left;
+  position: absolute;
+
+  background-image: linear-gradient(
+      45deg,
+      rgb(27, 27, 27),
+      rgb(27, 27, 27) 3.2rem,
+      rgba(0, 0, 0, 0) 3.2rem
+    ),
+    linear-gradient(
+      135deg,
+      rgb(27, 27, 27),
+      rgb(27, 27, 27) 3.2rem,
+      rgba(0, 0, 0, 0) 3.2rem
+    ),
+    linear-gradient(135deg, rgb(27, 27, 27), rgb(27, 27, 27));
+  background-repeat: no-repeat;
+  background-position: 100% 100%, 100% 100%, -3.2rem 100%;
+  background-size: 4.8rem 100%, 4.8rem 100%, 100% 100%;
 }
 
 /*----------------------------*/
@@ -60,7 +89,7 @@ header.abajo {
 }
 
 header.abajo ul li {
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: 700;
 }
 
@@ -69,12 +98,18 @@ header.abajo button {
   font-weight: 700;
 }
 
+header.abajo .active {
+  opacity: 1;
+}
+
 /*----------------------------*/
 /* MENU */
 
 .leftmenu {
   display: flex;
   align-items: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.6rem;
 }
 
 header nav {
@@ -99,7 +134,6 @@ header li {
   display: flex;
   padding: 0 0 0 30px;
   text-align: center;
-  font-size: 1.6rem;
 }
 
 header a {
@@ -109,6 +143,7 @@ header a {
 
 header.abajo a {
   text-decoration: none;
+  opacity: 0.5;
   color: #000;
 }
 
@@ -144,10 +179,7 @@ header.abajo .selected {
 }
 
 .open-menu,
-.close-menu {
-  display: none;
-}
-
+.close-menu,
 #es-mobile,
 #en-mobile {
   display: none;
@@ -167,6 +199,7 @@ header.abajo .selected {
   header.abajo a {
     color: #fff;
     font-weight: 300;
+    opacity: 1;
   }
 
   header.abajo #es-mobile,
@@ -282,7 +315,7 @@ section:nth-of-type(1) {
 }
 
 section:nth-of-type(1) img {
-  width: 90%;
+  width: 70%;
 }
 
 section:nth-of-type(1) p {
@@ -296,7 +329,7 @@ section:nth-of-type(1) p {
   background-color: #4588cc;
   color: #fff;
   border-radius: 2rem;
-  font-family: "Barlow", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1.6rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -323,11 +356,13 @@ section:nth-of-type(1) p {
   section:nth-of-type(1) p {
     padding: 1.5% 20% 0 20%;
   }
+
+  section:nth-of-type(1) img {
+    width: 40%;
+  }
 }
 
-section:nth-of-type(1) img {
-  width: 40%;
-}
+
 
 /*----------------------------*/
 /* SECTION SERVICIOS */
@@ -336,16 +371,20 @@ section:nth-of-type(2) {
   height: 100%;
   background: rgb(231, 231, 231);
   font-size: 1.6rem;
+  padding: 3% 0 10% 0;
+}
+
+.horizontal-cards {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 4% 0 4% 0;
+  margin-top: 7rem;
 }
 
 .servicios h1,
 .servicios-supp h1 {
-  font-family: "Barlow", sans-serif;
+  font-family: "Work Sans", sans-serif;
   text-transform: uppercase;
   font-size: 2.2rem;
   text-align: center;
@@ -535,13 +574,84 @@ section:nth-of-type(2) {
 
 section:nth-of-type(3) {
   background: #4588cc;
-  height: 70vh;
+  height: 100%;
+  padding: 3% 0 15% 0;
+}
+
+.container__productos {
+  margin-top: 10rem;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cards__productos {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.box {
+  width: 40rem;
+  height: 50rem;
+  background: rgb(49, 49, 49);
+  box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+.box .contentBx {
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 80%;
+  height: 6rem;
+  color: #000;
+  background-color: #fff;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: 0.5s;
+}
+
+.box .contentBx h3 {
+  margin-top: 1.5rem;
+  padding: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.box .contentBx p {
+  margin: 1rem 0 0;
+  padding: 2rem;
+  opacity: 0;
+  line-height: 1.2em;
+  font-size: 1.5rem;
+  transition: 0.5s;
+  text-align: center;
+}
+
+.box:hover .contentBx p {
+  opacity: 1;
+}
+
+.box:hover .contentBx {
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  left: 0;
+  cursor: default;
+}
+
+@media screen and (max-width: 1000px) {
+  .cards__productos {
+    display: grid;
+    row-gap: 5rem;
+  }
 }
 
 /*----------------------------*/
 /* SECTION CLIENTES */
 
-section:nth-of-type(4) {
+.clientes {
   background: rgb(27, 27, 27);
   height: 20vh;
 }
@@ -579,7 +689,7 @@ section:nth-of-type(4) {
 /*----------------------------*/
 /* SECTION CONTACTO */
 
-section:nth-of-type(5) {
+section:nth-of-type(4) {
   background: rgb(44, 44, 44);
   padding: 7%;
   display: flex;
@@ -655,7 +765,7 @@ textarea:focus {
 }
 
 .contacto label {
-  font-family: "Barlow", sans-serif;
+  font-family: "Work Sans", sans-serif;
   font-size: 1.6rem;
 }
 
@@ -672,7 +782,7 @@ textarea:focus::placeholder {
 .contacto h1 {
   height: fit-content;
   font-size: 3rem;
-  font-family: "Barlow", sans-serif;
+  font-family: "Roboto Slab", sans-serif;
   letter-spacing: 0.5rem;
   text-align: center;
 }
@@ -760,7 +870,7 @@ textarea:focus::placeholder {
 }
 
 .form__msg {
-  height: 4.5rem;
+  height: 100%;
   line-height: 4.5rem;
   background: #ee6c6c;
   padding: 0 1.5rem;
@@ -781,7 +891,7 @@ textarea:focus::placeholder {
 }
 
 .form__msg-success {
-  height: 4.5rem;
+  height: 100%;
   line-height: 4.5rem;
   background: #8bfa94;
   color: #000;

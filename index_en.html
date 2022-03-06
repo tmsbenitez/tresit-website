@@ -71,32 +71,32 @@
                 </svg>
               </button>
               <li>
-                <a href="#inicio">inicio</a>
+                <a href="#inicio">home</a>
               </li>
               <li>
-                <a href="#servicios">servicios</a>
+                <a href="#servicios">services</a>
               </li>
               <li>
-                <a href="#productos">productos</a>
+                <a href="#productos">products</a>
               </li>
               <li>
-                <a href="#contacto">contacto</a>
+                <a href="#contacto">contact</a>
               </li>
-              <button id="es-mobile">ES</button>
-              <button id="en-mobile"><a href="/index_en.html">EN</a></button>
+              <button id="es-mobile"><a href="/index.html">ES</a></button>
+              <button id="en-mobile">EN</button>
             </ul>
           </div>
           <div class="language-btn">
             <style>
-              #es,
-              #es-mobile,
-              header.abajo #es-mobile {
+              #en,
+              #en-mobile,
+              header.abajo #en-mobile {
                 color: #4588cc;
                 pointer-events: none;
               }
             </style>
-            <button id="es">ES</button>
-            <button id="en"><a href="/index_en.html">EN</a></button>
+            <button id="es"><a href="/index.html">ES</a></button>
+            <button id="en">EN</button>
           </div>
         </nav>
       </div>
@@ -110,18 +110,17 @@
       <section id="inicio">
         <img src="./assets/img/logo.png" />
         <p>
-          Somos profesionales que trabajan día a día para transformar sus ideas
-          en soluciones a la medida de sus necesidades empresariales o de
-          gestión.
+          We are professionals who work every day to transform your ideas into
+          solutions tailored to your business or management needs.
         </p>
-        <a class="cta" href="#contacto">Contacto</a>
+        <a class="cta" href="#contacto">Contact Us</a>
       </section>
       <!------------------->
 
       <!-- SECCION SERVICIOS -->
 
       <section id="servicios">
-        <h2 class="tag-servicios">servicios</h2>
+        <h2 class="tag-servicios">services</h2>
         <div class="horizontal-cards">
           <div class="servicios">
             <div class="image-data">
@@ -130,7 +129,7 @@
             </div>
             <img src="./assets/img/servicios-desarrollo.png" class="serv-dev" />
             <div class="card-data">
-              <h1 class="card__title">Desarrollo</h1>
+              <h1 class="card__title">Development</h1>
               <p class="card__description">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
                 autem modi deleniti dolor aliquam temporibus quos quo ut
@@ -142,7 +141,7 @@
           <div class="servicios-supp">
             <img src="./assets/img/servicios-soporte.png" class="serv-supp" />
             <div class="card-data-supp">
-              <h1 class="card__title-supp">Soporte</h1>
+              <h1 class="card__title-supp">Support</h1>
               <p class="card__description-supp">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
                 autem modi deleniti dolor aliquam temporibus quos quo ut
@@ -165,7 +164,7 @@
               class="serv-main"
             />
             <div class="card-data">
-              <h1 class="card__title">Asesoramiento</h1>
+              <h1 class="card__title">Advisement</h1>
               <p class="card__description">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque
                 autem modi deleniti dolor aliquam temporibus quos quo ut
@@ -181,12 +180,12 @@
       <!-- SECCION PRODUCTOS -->
 
       <section id="productos">
-        <h2>productos</h2>
+        <h2>products</h2>
         <div class="container__productos">
           <div class="cards__productos">
             <div class="box">
               <div class="contentBx">
-                <h3>Producto #1</h3>
+                <h3>Product #1</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Omnis in quae dolorem similique sint minus reiciendis
@@ -197,7 +196,7 @@
             </div>
             <div class="box">
               <div class="contentBx">
-                <h3>Producto #2</h3>
+                <h3>Product #2</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Omnis in quae dolorem similique sint minus reiciendis
@@ -208,7 +207,7 @@
             </div>
             <div class="box">
               <div class="contentBx">
-                <h3>Producto #3</h3>
+                <h3>Product #3</h3>
                 <p>
                   Lorem ipsum dolor sit amet, consectetur adipisicing elit.
                   Omnis in quae dolorem similique sint minus reiciendis
@@ -241,30 +240,32 @@
           <img src="./assets/img/ico-bw.png" />
           <form class="form" id="form">
             <div class="contact">
-              <h1>Contáctanos:</h1>
+              <h1>Contact Us:</h1>
             </div>
             <div class="info">
               <div class="fullname">
                 <div id="grupo__nombre">
                   <input
                     class="name"
-                    placeholder="Nombre"
+                    placeholder="Name"
                     type="text"
                     name="nombre"
                     id="input__nombre"
                   />
-                  <p class="form__input-error">Ingrese un nombre válido.</p>
+                  <p class="form__input-error">Please enter a valid name.</p>
                 </div>
 
                 <div id="grupo__apellido">
                   <input
                     class="lastname"
-                    placeholder="Apellido"
+                    placeholder="Lastname"
                     type="text"
                     name="apellido"
                     id="input__apellido"
                   />
-                  <p class="form__input-error">Ingrese un apellido válido.</p>
+                  <p class="form__input-error">
+                    Please enter a valid lastname.
+                  </p>
                 </div>
               </div>
 
@@ -276,30 +277,26 @@
                   name="email"
                   id="input__email"
                 />
-                <p class="form__input-error">
-                  Ingrese un correo electrónico válido.
-                </p>
+                <p class="form__input-error">Please enter a valid email.</p>
               </div>
 
               <div id="grupo__mensaje">
                 <textarea
                   class="message"
-                  placeholder="Mensaje"
+                  placeholder="Message"
                   name="mensaje"
                   id="input__mensaje"
                 ></textarea>
-                <p class="form__input-error">Por favor rellene este campo.</p>
+                <p class="form__input-error">Please fill in this field.</p>
               </div>
 
               <div class="form__msg-success" id="form__msg-success">
-                <p>Enviado exitosamente! Nos comunicaremos pronto.</p>
+                <p>Sent successfully! We will communicate soon.</p>
               </div>
               <div class="form__msg" id="form__msg">
-                <p>
-                  <b>Error:</b> Por favor rellena el formulario correctamente.
-                </p>
+                <p><b>Error:</b> Please fill in the form correctly.</p>
               </div>
-              <button type="submit" class="form__btn">Enviar</button>
+              <button type="submit" class="form__btn">Send</button>
             </div>
           </form>
         </div>
