@@ -186,8 +186,11 @@ header.abajo .selected {
 }
 
 #es,
-#en {
+#en,
+#es-mobile,
+#en-mobile {
   margin: 0;
+  display: none;
 }
 
 @media screen and (max-width: 1100px) {
@@ -206,12 +209,6 @@ header.abajo .selected {
   #en-mobile {
     color: #fff;
     font-weight: 300;
-  }
-
-  #es-mobile,
-  #en-mobile {
-    display: flex;
-    margin: 0;
   }
 
   #es-mobile {
@@ -362,8 +359,6 @@ section:nth-of-type(1) p {
   }
 }
 
-
-
 /*----------------------------*/
 /* SECTION SERVICIOS */
 
@@ -446,13 +441,6 @@ section:nth-of-type(2) {
   border-radius: 2rem;
 }
 
-.front-color {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(69, 136, 204, 0.5);
-  position: absolute;
-}
-
 @media screen and (min-width: 1000px) {
   .servicios,
   .servicios-supp {
@@ -500,6 +488,7 @@ section:nth-of-type(2) {
   .serv-supp,
   .serv-main {
     display: none;
+    width: 100%;
   }
 
   .servicios h1,
@@ -510,10 +499,6 @@ section:nth-of-type(2) {
 }
 
 /* DESARROLLO */
-
-.serv-dev {
-  width: 100%;
-}
 
 .background-image-dev {
   background: url("../img/servicios-desarrollo.png") center no-repeat;
@@ -531,10 +516,6 @@ section:nth-of-type(2) {
 
 /* SOPORTE */
 
-.serv-supp {
-  width: 100%;
-}
-
 .background-image-supp {
   background: url("../img/servicios-soporte.png") center no-repeat;
 }
@@ -550,10 +531,6 @@ section:nth-of-type(2) {
 }
 
 /* MANTENIMIENTO */
-
-.serv-main {
-  width: 100%;
-}
 
 .background-image-main {
   background: url("../img/servicios-mantenimiento.png") center no-repeat;
@@ -593,9 +570,10 @@ section:nth-of-type(3) {
 
 .box {
   width: 40rem;
-  height: 50rem;
+  height: 45rem;
   background: rgb(49, 49, 49);
   box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
+  border: 1px solid rgb(112, 112, 112);
   display: flex;
   justify-content: center;
 }
@@ -604,27 +582,34 @@ section:nth-of-type(3) {
   margin-top: auto;
   margin-bottom: auto;
   width: 80%;
-  height: 6rem;
+  height: 15rem;
   color: #000;
-  background-color: #fff;
+  background-color: rgb(255, 255, 255);
   overflow: hidden;
   box-sizing: border-box;
   transition: 0.5s;
 }
 
-.box .contentBx h3 {
+.box .contentBx .sica {
+  width: 60%;
+  display: flex;
+  margin: auto;
+  margin-top: 3rem;
+}
+
+.box .contentBx img {
+  width: 30%;
+  display: flex;
+  margin: auto;
   margin-top: 1.5rem;
-  padding: 0;
-  font-size: 2rem;
-  text-align: center;
 }
 
 .box .contentBx p {
   margin: 1rem 0 0;
-  padding: 2rem;
+  padding: 6rem 2rem 2rem 2rem;
   opacity: 0;
   line-height: 1.2em;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   transition: 0.5s;
   text-align: center;
 }
@@ -652,15 +637,12 @@ section:nth-of-type(3) {
 /* SECTION CLIENTES */
 
 .clientes {
-  background: rgb(27, 27, 27);
-  height: 20vh;
-}
-
-.clientes {
-  display: flex;
+  display: none;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
+  background: rgb(27, 27, 27);
+  height: 20vh;
 }
 
 .clientes img {
@@ -676,7 +658,7 @@ section:nth-of-type(3) {
 
 @media screen and (max-width: 1000px) {
   .clientes {
-    display: grid;
+    display: none;
     grid-template-columns: repeat(3, 1fr);
   }
 
@@ -691,7 +673,7 @@ section:nth-of-type(3) {
 
 section:nth-of-type(4) {
   background: rgb(44, 44, 44);
-  padding: 7%;
+  padding: 5% 7% 7% 7%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -921,10 +903,7 @@ textarea:focus::placeholder {
 
 .name.form__error,
 .lastname.form__error,
-.email.form__error {
-  border-bottom: 1px solid #d32e2e;
-}
-
+.email.form__error,
 .message.form__error {
   border-bottom: 1px solid #d32e2e;
 }
@@ -942,4 +921,21 @@ textarea:focus::placeholder {
 #grupo__apellido {
   display: grid;
   columns: 1;
+}
+
+/*----------------------------*/
+/* FOOTER */
+
+footer {
+  background-color: rgb(27, 27, 27);
+  height: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+footer a {
+  color: rgb(122, 122, 122);
 }

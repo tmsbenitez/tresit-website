@@ -29,7 +29,7 @@ menuLinks.forEach((menuLink) => {
 // INTERSECTION OBSERVER
 
 const options = {
-  threshold: 0.8,
+  threshold: 0.6,
 };
 
 const addActiveClass = (entries, observer) => {
