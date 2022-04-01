@@ -1,3 +1,4 @@
+/*----------------------------*/
 /* GLOBALS */
 * {
   margin: 0;
@@ -70,6 +71,13 @@ h2 {
   background-repeat: no-repeat;
   background-position: 100% 100%, 100% 100%, -3.2rem 100%;
   background-size: 4.8rem 100%, 4.8rem 100%, 100% 100%;
+}
+
+/*----------------------------*/
+/* PALLETTE */
+
+:root {
+  --main_blue: #4588cc;
 }
 
 /*----------------------------*/
@@ -149,7 +157,7 @@ header.abajo a {
 
 header a:hover {
   cursor: pointer;
-  color: #4588cc;
+  color: var(--main_blue);
   transition: 0.2s;
 }
 
@@ -163,18 +171,18 @@ header button {
 }
 
 header button:hover {
-  color: #4588cc;
+  color: var(--main_blue);
   transition: 0.2s;
   cursor: pointer;
 }
 
 .selected {
-  color: #4588cc;
+  color: var(--main_blue);
   transition: 0.2s;
 }
 
 header.abajo .selected {
-  color: #4588cc;
+  color: var(--main_blue);
   transition: 0.2s;
 }
 
@@ -323,7 +331,7 @@ section:nth-of-type(1) p {
 
 .cta {
   width: 12rem;
-  background-color: #4588cc;
+  background-color: var(--main_blue);
   color: #fff;
   border-radius: 2rem;
   font-family: "Work Sans", sans-serif;
@@ -340,7 +348,7 @@ section:nth-of-type(1) p {
 
 .cta:hover {
   background-color: #fff;
-  color: #4588cc;
+  color: var(--main_blue);
   transition: 0.3s;
 }
 
@@ -550,7 +558,7 @@ section:nth-of-type(2) {
 /* SECTION PRODUCTOS */
 
 section:nth-of-type(3) {
-  background: #4588cc;
+  background: var(--main_blue);
   height: 100%;
   padding: 3% 0 15% 0;
 }
