@@ -4,6 +4,9 @@ const textareas = document.querySelectorAll("#form textarea");
 
 const nombre = document.querySelector("#input__nombre");
 const apellido = document.querySelector("#input__apellido");
+const error = document.getElementById("form__msg");
+const errorP = document.querySelector("#error__p");
+const success = document.getElementById("form__msg-success");
 
 const expresiones = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
@@ -100,25 +103,33 @@ formulario.addEventListener("submit", (e) => {
       Subject: `Mensaje de ${nombre.value} ${apellido.value}`,
       Body: document.getElementById("input__mensaje").value,
     }).then((message) => {
-      document
-        .getElementById("form__msg-success")
-        .classList.add("form__msg-success-activo"),
-        document
-          .getElementById("form__msg")
-          .classList.remove("form__msg-activo"),
+      if (message == "OK") {
+        success.classList.add("form__msg-success-activo"),
+          error.classList.remove("form__msg-activo"),
+          setTimeout(() => {
+            success.classList.remove("form__msg-success-activo");
+          }, 5000),
+          document.querySelectorAll(".form__correcto").forEach((green) => {
+            green.classList.remove("form__correcto");
+          });
+      } else {
+        errorP.innerText = "Se produjo un error, inténtelo de nuevo más tarde.";
+        error.classList.add("form__msg-activo");
         setTimeout(() => {
-          document
-            .getElementById("form__msg-success")
-            .classList.remove("form__msg-success-activo");
-        }, 5000),
+          error.classList.remove("form__msg-activo");
+          errorP.innerHTML =
+            "<b>Error:</b> Por favor rellena el formulario correctamente.";
+        }, 5000);
+
         document.querySelectorAll(".form__correcto").forEach((green) => {
           green.classList.remove("form__correcto");
         });
+      }
     });
     formulario.reset();
 
     return false;
   } else {
-    document.getElementById("form__msg").classList.add("form__msg-activo");
+    error.classList.add("form__msg-activo");
   }
 });
