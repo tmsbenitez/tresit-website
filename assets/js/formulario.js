@@ -2,6 +2,9 @@ const formulario = document.getElementById("form");
 const inputs = document.querySelectorAll("#form input");
 const textareas = document.querySelectorAll("#form textarea");
 
+const nombre = document.querySelector("#input__nombre");
+const apellido = document.querySelector("#input__apellido");
+
 const expresiones = {
   nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
   correo: /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/,
@@ -88,21 +91,32 @@ formulario.addEventListener("submit", (e) => {
   e.preventDefault();
 
   if (campos.nombre && campos.apellido && campos.email && campos.mensaje) {
-    formulario.reset();
-
-    document
-      .getElementById("form__msg-success")
-      .classList.add("form__msg-success-activo");
-    document.getElementById("form__msg").classList.remove("form__msg-activo");
-    setTimeout(() => {
+    Email.send({
+      Host: "mail.tresit.com.ar",
+      Username: "contacto@tresit.com.ar",
+      Password: "tresit2017",
+      To: "contacto@tresit.com.ar",
+      From: document.getElementById("input__email").value,
+      Subject: `Mensaje de ${nombre.value} ${apellido.value}`,
+      Body: document.getElementById("input__mensaje").value,
+    }).then((message) => {
       document
         .getElementById("form__msg-success")
-        .classList.remove("form__msg-success-activo");
-    }, 5000);
-
-    document.querySelectorAll(".form__correcto").forEach((green) => {
-      green.classList.remove("form__correcto");
+        .classList.add("form__msg-success-activo"),
+        document
+          .getElementById("form__msg")
+          .classList.remove("form__msg-activo"),
+        setTimeout(() => {
+          document
+            .getElementById("form__msg-success")
+            .classList.remove("form__msg-success-activo");
+        }, 5000),
+        document.querySelectorAll(".form__correcto").forEach((green) => {
+          green.classList.remove("form__correcto");
+        });
     });
+    formulario.reset();
+
     return false;
   } else {
     document.getElementById("form__msg").classList.add("form__msg-activo");

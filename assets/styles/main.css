@@ -317,6 +317,7 @@ section:nth-of-type(1) {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 4rem;
 }
 
 section:nth-of-type(1) img {
@@ -324,7 +325,7 @@ section:nth-of-type(1) img {
 }
 
 section:nth-of-type(1) p {
-  font-size: 1.8rem;
+  font-size: 1.7rem;
   text-align: center;
   padding: 1.5% 5% 0 5%;
 }
@@ -579,20 +580,21 @@ section:nth-of-type(3) {
 .box {
   width: 40rem;
   height: 45rem;
-  background: rgb(49, 49, 49);
+  background-image: url("/assets/img/tactile_noise.png");
   box-shadow: 0 3rem 3rem rgba(0, 0, 0, 0.5);
   border: 1px solid rgb(112, 112, 112);
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
 .box .contentBx {
-  margin-top: auto;
-  margin-bottom: auto;
   width: 80%;
   height: 15rem;
   color: #000;
-  background-color: rgb(255, 255, 255);
+  background-color: #fff;
+  box-shadow: 0 0 0.6rem rgba(255, 255, 255, 0.8);
   overflow: hidden;
   box-sizing: border-box;
   transition: 0.5s;
@@ -622,15 +624,31 @@ section:nth-of-type(3) {
   text-align: center;
 }
 
+.desc {
+  color: #fff;
+  font-size: 1.6rem;
+  font-family: "Work Sans", sans-serif;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  opacity: 0.8;
+}
+
 .box:hover .contentBx p {
   opacity: 1;
+}
+
+.box:hover .contentBx h4 {
+  display: none;
+}
+
+.box:hover .desc {
+  display: none;
 }
 
 .box:hover .contentBx {
   width: 100%;
   height: 100%;
-  bottom: 0;
-  left: 0;
   cursor: default;
 }
 
@@ -681,7 +699,7 @@ section:nth-of-type(3) {
 
 section:nth-of-type(4) {
   background: rgb(44, 44, 44);
-  padding: 5% 7% 7% 7%;
+  padding: 7% 7% 7% 7%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -937,11 +955,29 @@ textarea:focus::placeholder {
 footer {
   background-color: rgb(27, 27, 27);
   height: 7rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 0;
+  margin: 0;
+}
+
+.up__btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0;
-  margin: 0;
+}
+
+.copy {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.copy p {
+  color: rgb(255, 255, 255, 0.5);
+  font-size: 1.3rem;
+  padding-left: 1rem;
+  font-family: "Work Sans", sans-serif;
 }
 
 footer a {
