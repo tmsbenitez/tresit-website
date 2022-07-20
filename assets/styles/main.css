@@ -100,7 +100,7 @@ h2 {
   font-weight: 600;
 }
 
-.header.abajo .active {
+.header.abajo .menu-a.active {
   opacity: 1;
 }
 
