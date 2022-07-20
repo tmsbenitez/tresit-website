@@ -198,7 +198,7 @@ h2 {
     padding: 1rem;
   }
 
-  .header.abajo a {
+  .header.abajo .menu-a {
     color: var(--white);
     font-weight: 300;
     opacity: 1;
