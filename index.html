@@ -27,67 +27,61 @@
     <!-- HEADER Y MENU -->
 
     <header class="header">
-      <div>
-        <nav>
-          <div class="leftmenu">
-            <a href="/" class="logo-a">
-              <img
-                class="logo"
-                alt="logo-tresit"
-                src="./assets/img/logo2.png"
+      <nav>
+        <div class="leftmenu">
+          <a href="/" class="logo-a">
+            <img class="logo" alt="logo-tresit" src="./assets/img/logo2.png" />
+          </a>
+          <button class="open-menu" aria-label="Abrir menu">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30"
+              height="30"
+              fill="currentColor"
+              class="bi bi-list"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
               />
-            </a>
-            <button class="open-menu" aria-label="Abrir menu">
+            </svg>
+          </button>
+          <ul class="menu">
+            <button class="close-menu" aria-label="Cerrar menu">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="30"
                 height="30"
                 fill="currentColor"
-                class="bi bi-list"
+                class="bi bi-x-lg"
                 viewBox="0 0 16 16"
               >
                 <path
                   fill-rule="evenodd"
-                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                  d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
+                />
+                <path
+                  fill-rule="evenodd"
+                  d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
                 />
               </svg>
             </button>
-            <ul class="menu">
-              <button class="close-menu" aria-label="Cerrar menu">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30"
-                  height="30"
-                  fill="currentColor"
-                  class="bi bi-x-lg"
-                  viewBox="0 0 16 16"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"
-                  />
-                  <path
-                    fill-rule="evenodd"
-                    d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"
-                  />
-                </svg>
-              </button>
-              <li>
-                <a class="menu-a" href="#inicio">inicio</a>
-              </li>
-              <li>
-                <a class="menu-a" href="#servicios">servicios</a>
-              </li>
-              <li>
-                <a class="menu-a" href="#productos">productos</a>
-              </li>
-              <li>
-                <a class="menu-a" href="#contacto">contacto</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-      </div>
+            <li>
+              <a class="menu-a" href="#inicio">inicio</a>
+            </li>
+            <li>
+              <a class="menu-a" href="#servicios">servicios</a>
+            </li>
+            <li>
+              <a class="menu-a" href="#productos">productos</a>
+            </li>
+            <li>
+              <a class="menu-a" href="#contacto">contacto</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
     <!------------------->
 
@@ -133,7 +127,7 @@
               </p>
             </div>
           </div>
-          <div class="servicios-supp" data-aos="fade-left">
+          <div class="servicios-supp" data-aos="fade-right">
             <img
               src="./assets/img/servicios-soporte.png"
               class="serv-supp serv"
