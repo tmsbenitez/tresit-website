@@ -19,15 +19,20 @@
       href="https://fonts.googleapis.com/css2?family=Cantarell&family=Quicksand:wght@400;500&family=Roboto+Slab:wght@300&family=Ubuntu:wght@300&family=Work+Sans:wght@300&display=swap"
       rel="stylesheet"
     />
+
+    <!-- AOS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <!-- HEADER Y MENU -->
 
-    <header class="h-default">
+    <header class="header">
       <div>
         <nav>
           <div class="leftmenu">
-            <img class="logo2" src="./assets/img/logo2.png" />
+            <a href="/" class="logo-a"
+              ><img class="logo" alt="logo-tresit" src="./assets/img/logo2.png"
+            /></a>
             <button class="open-menu" aria-label="Abrir menu">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -64,33 +69,20 @@
                 </svg>
               </button>
               <li>
-                <a href="#inicio">inicio</a>
+                <a class="menu-a" href="#inicio">inicio</a>
               </li>
               <li>
-                <a href="#servicios">servicios</a>
+                <a class="menu-a" href="#servicios">servicios</a>
               </li>
               <li>
-                <a href="#productos">productos</a>
+                <a class="menu-a" href="#productos">productos</a>
               </li>
               <li>
-                <a href="#contacto">contacto</a>
+                <a class="menu-a" href="#contacto">contacto</a>
               </li>
-              <button id="es-mobile">ES</button>
-              <button id="en-mobile"><a href="/index_en.html">EN</a></button>
             </ul>
           </div>
-          <div class="language-btn">
-            <style>
-              #es,
-              #es-mobile,
-              header.abajo #es-mobile {
-                color: #4588cc;
-                pointer-events: none;
-              }
-            </style>
-            <button id="es">ES</button>
-            <button id="en"><a href="/index_en.html">EN</a></button>
-          </div>
+          <div class="language-btn"></div>
         </nav>
       </div>
     </header>
@@ -101,13 +93,13 @@
       <!-- SECCION: INICIO -->
 
       <section id="inicio">
-        <img src="./assets/img/logo.png" />
-        <p>
+        <img src="./assets/img/logo.png" data-aos="fade-up"/>
+        <p data-aos="fade-up">
           Somos profesionales que trabajan día a día para transformar sus ideas
           en soluciones a la medida de sus necesidades empresariales o de
           gestión.
         </p>
-        <a class="cta" href="#contacto">Contacto</a>
+        <a class="cta" href="#contacto" data-aos="fade-up">Contacto</a>
       </section>
       <!------------------->
       <!-- SECCION SERVICIOS -->
@@ -115,13 +107,13 @@
       <section id="servicios">
         <h2 class="tag-servicios">servicios</h2>
         <div class="horizontal-cards">
-          <div class="servicios">
-            <div class="image-data">
+          <div class="servicios" data-aos="fade-right">
+            <picture class="image-data">
               <div class="background-image-dev"></div>
-            </div>
+            </picture>
             <img
               src="./assets/img/servicios-desarrollo.png"
-              class="serv-dev"
+              class="serv-dev serv"
               alt="servicios-desarrollo-tresit"
             />
             <div class="card-data">
@@ -138,10 +130,10 @@
               </p>
             </div>
           </div>
-          <div class="servicios-supp">
+          <div class="servicios-supp" data-aos="fade-left">
             <img
               src="./assets/img/servicios-soporte.png"
-              class="serv-supp"
+              class="serv-supp serv"
               alt="servicios-soporte-tresit"
             />
             <div class="card-data-supp">
@@ -156,17 +148,17 @@
                 la mejor estrategia/solución.
               </p>
             </div>
-            <div class="image-data-supp">
+            <picture class="image-data-supp">
               <div class="background-image-supp"></div>
-            </div>
+            </picture>
           </div>
-          <div class="servicios">
-            <div class="image-data">
-              <div class="background-image-main"></div>
-            </div>
+          <div class="servicios" data-aos="fade-right">
+            <picture class="image-data">
+              <div class="background-image-main" ></div>
+            </picture>
             <img
               src="./assets/img/servicios-mantenimiento.png"
-              class="serv-main"
+              class="serv-main serv"
               alt="servicios-mantenimiento-tresit"
             />
             <div class="card-data">
@@ -191,44 +183,46 @@
 
       <section id="productos">
         <h2>productos</h2>
-        <div class="container__productos">
+        <div class="container__productos" data-aos="fade-up">
           <div class="cards__productos">
-            <div class="box">
-              <div class="contentBx">
-                <img
-                  src="./assets/img/sica.png"
-                  alt="sica-tresit"
-                  class="sica"
-                />
+            <div class="contentBox">
+              <picture class="product-image">
+                <img src="./assets/img/sica.png" alt="sica-tresit" />
+              </picture>
+              <div class="product-info">
+                <span class="title">Gestión de tareas y auditoría.</span>
                 <p>
                   Software dirigido a instituciones con niveles de auditorías
                   sobre tareas que realizan sus empleados, permitiendo que los
                   supervisores posean un potente aplicativo.
                 </p>
               </div>
-              <p class="desc">Gestión de tareas y auditoría.</p>
             </div>
-            <div class="box">
-              <div class="contentBx">
+            <div class="contentBox">
+              <picture class="product-image">
                 <img src="./assets/img/hisc.png" alt="hisc-tresit" />
+              </picture>
+              <div class="product-info">
+                <span class="title">Gestión de turnos e historia clínica.</span>
                 <p>
                   Software de gestión online de turnos médicos con registro de
                   historia clínica digital de pacientes, para centros médicos,
                   consultorios y profesionales de la salud.
                 </p>
               </div>
-              <p class="desc">Gestión de turnos e historia clínica.</p>
             </div>
-            <div class="box">
-              <div class="contentBx">
+            <div class="contentBox">
+              <picture class="product-image">
                 <img src="./assets/img/gline.png" alt="gline-tresit" />
+              </picture>
+              <div class="product-info">
+                <span class="title">Gestión comercial integral.</span>
                 <p>
                   Software integral multi-empresa, multi-unidad de negocios y
                   multi-usuario. Gestión de Compras y Ventas, Pedidos,
                   Despachos, Recepción de mercaderías para múltiples depósitos.
                 </p>
               </div>
-              <p class="desc">Gestión comercial integral.</p>
             </div>
           </div>
         </div>
@@ -237,20 +231,21 @@
 
       <!-- SECCION CLIENTES -->
 
-      <div class="clientes" id="clientes">
+      <!-- <div class="clientes" id="clientes">
         <img src="./assets/img/ejemplo.png" />
         <img src="./assets/img/ejemplo2.png" />
         <img src="./assets/img/ejemplo3.png" />
         <img src="./assets/img/ejemplo4.png" />
         <img src="./assets/img/ejemplo5.png" />
         <img src="./assets/img/ejemplo6.png" />
-      </div>
+      </div> -->
+
       <!------------------->
 
       <!-- SECCION CONTACTO -->
 
       <section id="contacto" class="contacto">
-        <div class="form-img">
+        <div class="form-img" data-aos="fade-up">
           <img src="./assets/img/ico-bw.png" />
           <form class="form" id="form">
             <div class="contact">
@@ -346,6 +341,10 @@
       <!------------------->
     </div>
     <!------------------->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
     <script defer src="./assets/js/index.js"></script>
     <script defer src="./assets/js/formulario.js"></script>
     <script
