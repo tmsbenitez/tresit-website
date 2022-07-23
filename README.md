@@ -1,4 +1,4 @@
-# TRESIT
+# tresIT Single Website
 
 ![tresit](./assets/img/logo.png)
 
